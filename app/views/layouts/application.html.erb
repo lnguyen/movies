@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Movies</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
+  <div class="wrapper site_frame">
+    <div id="header" class="red">
+      <h1 id="title"><a href="/">AZ::Movies</a></h1>
+      <div id="user_links">
+         
+        
+        <ul>
+          <% if user_signed_in? %>
+            <li>
+              <%= link_to('logout', destroy_user_session_path, :method => :delete) %>        
+            </li> |
+          <% else %>
+            <li>
+              <%= link_to('Login', new_user_session_path)  %>  
+            </li> |
+            <li>
+              <%= link_to('Register', new_user_registration_path)  %>
+            </li> |
+          <% end %>
+          <li><a href="#">contact</a></li>
+        </ul>
+      </div>
+      <div id="form_wrapper">
+      	<form>
+          <input type="text" title="search" class="field"/><input type="submit" value="search" class="button" />
+        </form>
+      </div>
+    </div>
+    <div id="subnav">
+      <ol>
+        <li><a href="">留言板 1</a></li>
+        <li><a href="">留言板 2</a></li>
+        <li><a href="">留言板 3</a></li>
+      </ol>
+    </div>
+    <div id="main_wrapper">
+      <div id="content_wrapper">
+	      <%= yield %> 
+      </div>
+	    <div id="right_wrapper">
+        <h2>地方领导留言板</h2>
+        <ol class="sub_list">
+          <li>地方领导留言板|河南北京上海广东海南浙江山东广</li>
+          <li>地方领导留言板|河南北京上海广东海南浙江山东广</li>
+          <li>地方领导留言板|河南北京上海广东海南浙江山东广</li>
+        </ol>
+        <hr />
+        <h2>地方领导留言板</h2>
+        <ol class="sub_list">
+          <li>地方领导留言板|河南北京上海广东海南浙江山东广</li>
+          <li>地方领导留言板|河南北京上海广东海南浙江山东广</li>
+          <li>地方领导留言板|河南北京上海广东海南浙江山东广</li>
+        </ol>
+    </div>
+    <div style=”clear:both;”>&nbsp;</div>
+  </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          </body>
+</html>
