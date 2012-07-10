@@ -1,4 +1,6 @@
 Movies::Application.routes.draw do
+  resources :movies
+
   get "dashboard/index"
 
   get "dashboard/edit"

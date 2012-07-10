@@ -1,0 +1,25 @@
+%h2 Latest Releases
+
+%table
+  %tr
+    %th Title
+    %th Release
+    %th Production company
+    %th Image
+    %th
+    %th
+    %th
+
+  - @movies.each do |movie|
+    %tr
+      %td= movie.title
+      %td= movie.release
+      %td= movie.production_company
+      %td= movie.image
+      %td= link_to 'Show', movie
+      %td= link_to 'Edit', edit_movie_path(movie)
+      %td= link_to 'Destroy', movie, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'Create New Movie', new_movie_path

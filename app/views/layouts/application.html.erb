@@ -27,9 +27,8 @@
             </li> |
             <li>
               <%= link_to('Register', new_user_registration_path)  %>
-            </li> |
+            </li>
           <% end %>
-          <li><a href="#">contact</a></li>
         </ul>
       </div>
       <div id="form_wrapper">
@@ -40,7 +39,9 @@
     </div>
     <div id="subnav">
       <ol>
-        <li><a href="">留言板 1</a></li>
+        <li>
+          <%= link_to "Movies", movies_path %> 
+        </li>
         <li><a href="">留言板 2</a></li>
         <li><a href="">留言板 3</a></li>
       </ol>
@@ -51,6 +52,7 @@
       </div>
 	    <div id="right_wrapper">
         <h2>地方领导留言板</h2>
+        <!-- Most recent submissions --> 
         <ol class="sub_list">
           <li>地方领导留言板|河南北京上海广东海南浙江山东广</li>
           <li>地方领导留言板|河南北京上海广东海南浙江山东广</li>
